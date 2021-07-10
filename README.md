@@ -32,6 +32,7 @@ This is Telegram Parmanent Files Store Bot
 - `BANNED_CHAT_IDS` - All Banned Channel IDs *(Optional)*
 	- Put all banned channel IDs & Separate with space.
 
+----
 
 ### Deploy To Heroku
 
