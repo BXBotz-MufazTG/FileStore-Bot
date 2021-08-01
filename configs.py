@@ -19,26 +19,27 @@ class Config(object):
 	BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "-1001362659779 -1001255795497").split()))
 	OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
 	ABOUT_BOT_TEXT = f"""
-This is Permanent Files Store Bot!
-Send me any file I will save it in my Database. Also works for channel. Add me to channel as Admin with Edit Permission, I will add Save Uploaded File in Channel & add Sharable Button Link.
+🤖 **Bot** : File Store Bot
 
-🤖 **My Name:** [Files Store Bot](https://t.me/{BOT_USERNAME})
+👲 **Developer** : [ᴍʜᴅ ᴍᴜꜰᴀz](https://telegram.me/Mufaz123)
 
-📝 **Language:** [Python3](https://www.python.org)
+📣 **Channel** : @BX_Botz
 
-📚 **Library:** [Pyrogram](https://docs.pyrogram.org)
+👥 **Group** : [ʙx sᴜᴘᴘᴏʀᴛ](https://t.me/BxSupport)
 
-📡 **Hosted on:** [Heroku](https://heroku.com)
+💻 **Source** : [Click here](https://t.me/nokiyirunnoippokitum)
 
-👥 **Support Group:** [ʙx sᴜᴘᴘᴏʀᴛ](https://t.me/BxSupport)
+🎧 **Language** : [Python3](https://python.org/)
 
-📢 **Updates Channel:[ʙx ʙᴏᴛᴢ](https://t.me/BX_Botz)
+📚 **Library** : [Pyrogram v1.2.0](https://pyrogram.org/)
+
+🧑‍💻 **Server** : [Heroku](https://heroku.com/)
 """
 	ABOUT_DEV_TEXT = f"""
 🧑🏻‍💻 **Developer:[ᴍʜᴅ ᴍᴜꜰᴀᴢ](https://t.me/mufaz123)
 """
 	HOME_TEXT = """
-Hi, [{}](tg://user?id={})
+Hai, [{}](tg://user?id={})
 
 `Iam a Simple File Store Bot.
 Send me any file I will give you permenent sharable link`
