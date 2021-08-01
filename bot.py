@@ -39,23 +39,6 @@ async def button(bot: Client, cmd: CallbackQuery):
                 ]
             )
         )
-@Bot.on_callback_query()
-async def button(bot: Client, cmd: CallbackQuery):
-    cb_data = cmd.data
-    if "about" in cb_data:
-        await cmd.message.edit(
-            Config.ABOUT_MSG,
-            parse_mode="Markdown",
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("🏠Home", callback_data="gotohome"),
-                        InlineKeyboardButton("⚜️Share⚜️", url="t.me/bx_botz")
-                    ]
-                ]
-            )
-        )
 @Bot.on_message(filters.command("start") & filters.private)
 async def start(bot: Client, cmd: Message):
     if cmd.from_user.id in Config.BANNED_USERS:
@@ -329,7 +312,7 @@ async def _banned_usrs(_, m: Message):
 @Bot.on_callback_query()
 async def button(bot: Client, cmd: CallbackQuery):
     cb_data = cmd.data
-    if "aboutbot" in cb_data:
+    if "about" in cb_data:
         await cmd.message.edit(
             Config.ABOUT_TEXT,
             parse_mode="Markdown",
@@ -369,7 +352,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                         InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")
                     ],
                     [
-                        InlineKeyboardButton("🔰About", callback_data="aboutbot"),
+                        InlineKeyboardButton("🔰About", callback_data="about"),
                         InlineKeyboardButton("💡Bot List", url="https://t.me/BX_Botz/31")
                     ]
                 ]
@@ -421,7 +404,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                         InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")
                     ],
                     [
-                        InlineKeyboardButton("🔰About", callback_data="aboutbot"),
+                        InlineKeyboardButton("🔰About", callback_data="about"),
                         InlineKeyboardButton("💡Bot List", url="https://t.me/BX_Botz/31")
                     ]
                 ]
