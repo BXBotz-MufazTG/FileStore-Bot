@@ -39,6 +39,23 @@ async def button(bot: Client, cmd: CallbackQuery):
                 ]
             )
         )
+@Bot.on_callback_query()
+async def button(bot: Client, cmd: CallbackQuery):
+    cb_data = cmd.data
+    if "about" in cb_data:
+        await cmd.message.edit(
+            Config.ABOUT_MSG,
+            parse_mode="Markdown",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("🏠Home", callback_data="gotohome"),
+                        InlineKeyboardButton("⚜️Share⚜️", url="t.me/bx_botz")
+                    ]
+                ]
+            )
+        )
 @Bot.on_message(filters.command("start") & filters.private)
 async def start(bot: Client, cmd: Message):
     if cmd.from_user.id in Config.BANNED_USERS:
