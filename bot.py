@@ -22,6 +22,23 @@ async def _(bot: Client, cmd: Message):
     await handle_user_status(bot, cmd)
 
 
+@Bot.on_callback_query()
+async def button(bot: Client, cmd: CallbackQuery):
+    cb_data = cmd.data
+    if "help" in cb_data:
+        await cmd.message.edit(
+            Config.HELP_TEXT,
+            parse_mode="Markdown",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("🏠Home", callback_data="gotohome"),
+                        InlineKeyboardButton("⚜️Share⚜️", url="https://t.me/share/url?url=%2A%2AHai%20Friends%2C%20%2A%2A%0A%60Here%20We%20Found%20an%20Advanced%20Telegram%20Filestore%20Bot%60%0ALink%20%40BXFileStoreBot%20Channel%20%40BX_Botz")
+                    ]
+                ]
+            )
+        )
 @Bot.on_message(filters.command("start") & filters.private)
 async def start(bot: Client, cmd: Message):
     if cmd.from_user.id in Config.BANNED_USERS:
