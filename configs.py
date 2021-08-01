@@ -46,6 +46,6 @@ Send me any file I will give you permenent sharable link`
 
 👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://t.me/BX_Botz)
 """
-         HELP_TEXT = """
-👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://t.me/BX_Botz)
+         HELP_TEXT = f"""
+Join My Update Channel @BX_Botz
 """
