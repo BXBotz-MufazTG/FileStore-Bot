@@ -87,7 +87,7 @@ async def start(bot: Client, cmd: Message):
                         InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")
                     ],
                     [
-                        InlineKeyboardButton("🔰About", callback_data="aboutbot"),
+                        InlineKeyboardButton("🔰About", callback_data="about"),
                         InlineKeyboardButton("⚙️Help", callback_data="help")
                     ]
                 ]
