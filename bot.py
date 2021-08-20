@@ -33,8 +33,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🏠Home", callback_data="gotohome"),
-                        InlineKeyboardButton("⚜️Share⚜️", url="https://t.me/share/url?url=%2A%2AHai%20Friends%2C%20%2A%2A%0A%60Here%20We%20Found%20an%20Advanced%20Telegram%20Filestore%20Bot%60%0ALink%20%40BXFileStoreBot%20Channel%20%40BX_Botz")
+                        InlineKeyboardButton("Movie Channel", url="https://t.me/BX_Movies"),
+                        InlineKeyboardButton("Movie Group", url="https://t.me/BXMoviesGroup")
                     ]
                 ]
             )
@@ -66,12 +66,8 @@ async def start(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Update Channel", url="https://t.me/BX_Botz"),
-                        InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")
-                    ],
-                    [
-                        InlineKeyboardButton("🔰About", callback_data="about"),
-                        InlineKeyboardButton("⚙️Help", callback_data="help")
+                        InlineKeyboardButton("♻️ Movie Channel", url="https://t.me/BX_Movies"),
+                        InlineKeyboardButton("⚜️ Movie Group", url="https://t.me/BXMoviesGroup")
                     ]
                 ]
             )
@@ -133,11 +129,8 @@ async def main(bot: Client, message: Message):
                 f"**Your File Stored in my Database!**\n\nHere is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("📌Open Link📌", url=share_link),
-                      InlineKeyboardButton("⚜️Share Me⚜️", url="https://t.me/share/url?url=%2A%2AHai%20Friends%2C%20%2A%2A%0A%60Here%20We%20Found%20an%20Advanced%20Telegram%20Filestore%20Bot%60%0ALink%20%40BXFileStoreBot%20Channel%20%40BX_Botz")
-                      ],[
-                      InlineKeyboardButton("🤖 Update Channel", url="https://t.me/BX_Botz"),
-                      InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")]]
+                    [[InlineKeyboardButton("Movie Channel", url="https://t.me/BX_Movies"),
+                      InlineKeyboardButton("Movie Group", url="https://t.me/BXMoviesGroup")]]
                 ),
                 disable_web_page_preview=True
             )
@@ -178,7 +171,7 @@ async def main(bot: Client, message: Message):
         try:
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = forwarded_msg.message_id
-            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=BX_Botz_{file_er_id}"
+            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=BX_Movies_{file_er_id}"
             CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.message_id,
                                                           reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
                                                               "Get Sharable Stored Link", url=share_link)]]))
@@ -400,12 +393,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Update Channel", url="https://t.me/BX_Botz"),
-                        InlineKeyboardButton("👥Support Group", url="https://t.me/BxSupport")
-                    ],
-                    [
-                        InlineKeyboardButton("🔰About", callback_data="about"),
-                        InlineKeyboardButton("💡Bot List", url="https://t.me/BX_Botz/31")
+                        InlineKeyboardButton("♻️ Movie Channel", url="https://t.me/BX_Movies"),
+                        InlineKeyboardButton("⚜️ Movie Group", url="https://t.me/BXMoviesGroup")
                     ]
                 ]
             )
