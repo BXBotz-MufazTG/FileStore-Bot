@@ -18,13 +18,13 @@ class Config(object):
 	BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
 	BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "-1001362659779 -1001255795497").split()))
 	OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
-	ABOUT_MSG = f"""🤖 **Bot** : File Store Bot
+	ABOUT_MSG = f"""🤖 **Bot** : BX Movies Bot
 
-👲 **Developer** : [ᴍʜᴅ ᴍᴜꜰᴀz](https://telegram.me/Mufaz123)
+👲 **Developer** : [ᴍʜᴅ ᴍᴜꜰᴀz 🇮🇳](https://telegram.me/MufazTG)
 
-📣 **Channel** : @BX_Botz
+📣 **Channel** : @BX_Movies
 
-👥 **Group** : [ʙx sᴜᴘᴘᴏʀᴛ](https://t.me/BxSupport)
+👥 **Group** : [BX Movies Group](https://t.me/BXMOVIESGROUP)
 
 💻 **Source** : [Click here](https://t.me/nokiyirunnoippokitum)
 
@@ -35,14 +35,13 @@ class Config(object):
 🧑‍💻 **Server** : [Heroku](https://heroku.com/)
 """
 	ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 **Developer:[ᴍʜᴅ ᴍᴜꜰᴀᴢ](https://t.me/mufaz123)
+🧑🏻‍💻 **Developer:[ᴍʜᴅ ᴍᴜꜰᴀᴢ 🇮🇳](https://t.me/mufazTG)
 """
-	HOME_TEXT = """Hai, [{}](tg://user?id={})
+	HOME_TEXT = """Hello, [{}](tg://user?id={})
 
-`Iam a Simple File Store Bot.
-Send me any file I will give you permenent sharable link`
+**Iam A Bot Of @BX_Movies. I Will Give You Movie Files**
 
-👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://t.me/BX_Botz)
+👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [🎨 BX Movies](https://t.me/BX_Movies)
 """
-	HELP_TEXT = f"""Join My Update Channel @BX_Botz
+	HELP_TEXT = f"""**Sorry! I Can't Help You**
 """
